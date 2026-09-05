@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Yus Shadie | Creative Portfolio</title>
+
+  <meta name="description"
+    content="Yus Shadie - AI Creative, Visual Designer and Digital Creator">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 18px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 18px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .menu a {
+      color: #aaa;
+    }
+
+    .menu a:hover {
+      color: white;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      padding: 150px 25px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background:
+        radial-gradient(circle at 80% 20%, #252525 0%, transparent 35%),
+        #0a0a0a;
+    }
+
+    .small-title {
+      font-size: 13px;
+      letter-spacing: 4px;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(60px, 18vw, 110px);
+      line-height: 0.85;
+      letter-spacing: -4px;
+      margin-bottom: 30px;
+    }
+
+    .hero h2 {
+      font-size: 18px;
+      line-height: 1.5;
+      letter-spacing: 3px;
+      color: #ccc;
+      font-weight: normal;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 15px 25px;
+      border: 1px solid #ffffff;
+      width: fit-content;
+      font-size: 12px;
+      letter-spacing: 2px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: white;
+      color: black;
+    }
+
+    /* GENERAL SECTION */
+
+    section {
+      padding: 100px 25px;
+    }
+
+    .section-number {
+      color: #666;
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-size: 42px;
+      line-height: 1;
+      margin-bottom: 35px;
+    }
+
+    .description {
+      color: #aaa;
+      font-size: 16px;
+      max-width: 650px;
+    }
+
+    /* ABOUT */
+
+    .about-box {
+      margin-top: 40px;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+      padding: 25px 0;
+    }
+
+    .about-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid #222;
+    }
+
+    .about-row:last-child {
+      border-bottom: none;
+    }
+
+    .about-row span:first-child {
+      color: #777;
+    }
+
+    /* SKILLS */
+
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 35px;
+    }
+
+    .skill {
+      padding: 22px 15px;
+      border: 1px solid #292929;
+      background: #111;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    /* EXPERIENCE */
+
+    .experience {
+      margin-top: 30px;
+    }
+
+    .experience-item {
+      padding: 30px 0;
+      border-top: 1px solid #333;
+    }
+
+    .experience-item h3 {
+      font-size: 21px;
+      margin-bottom: 5px;
+    }
+
+    .experience-item .year {
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .experience-item p {
+      color: #999;
+    }
+
+    /* SERVICES */
+
+    .services {
+      margin-top: 30px;
+    }
+
+    .service {
+      padding: 28px 0;
+      border-top: 1px solid #333;
+    }
+
+    .service h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .service p {
+      color: #888;
+    }
+
+    /* PORTFOLIO */
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .project {
+      min-height: 260px;
+      background: linear-gradient(135deg,#222,#111);
+      border: 1px solid #292929;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      transition: 0.4s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      border-color: #777;
+    }
+
+    .project-number {
+      color: #777;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .project h3 {
+      font-size: 24px;
+    }
+
+    .project p {
+      color: #888;
+      font-size: 13px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #111;
+    }
+
+    .contact h2 {
+      font-size: clamp(42px, 12vw, 80px);
+      line-height: 0.95;
+      margin-bottom: 25px;
+    }
+
+    .contact p {
+      color: #888;
+      max-width: 500px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .contact-link {
+      border: 1px solid #444;
+      padding: 13px 18px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 30px 25px;
+      border-top: 1px solid #222;
+      color: #666;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* DESKTOP */
+
+    @media (min-width: 700px) {
+
+      .hero {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+
+      section {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+
+      .portfolio {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .skills {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .menu {
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="logo">YUS SHADIE</div>
+
+    <div class="menu">
+      <a href="#about">ABOUT</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#portfolio">WORK</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="small-title">
+      HELLO, I'M
+    </div>
+
+    <h1>
+      YUS<br>
+      SHADIE
+    </h1>
+
+    <h2>
+      AI CREATIVE<br>
+      VISUAL DESIGNER<br>
+      DIGITAL CREATOR
+    </h2>
+
+    <a href="#portfolio" class="button">
+      VIEW MY WORK →
+    </a>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="section-number">
+      01 — ABOUT
+    </div>
+
+    <h2 class="section-title">
+      CREATIVE MIND.<br>
+      VISUAL STORYTELLER.
+    </h2>
+
+    <p class="description">
+      Yus Shadie is a creative professional focused on
+      visual design, artificial intelligence, digital
+      creativity and visual storytelling.
+    </p>
+
+    <div class="about-box">
+
+      <div class="about-row">
+        <span>NAME</span>
+        <span>Yus Shadie</span>
+      </div>
+
+      <div class="about-row">
+        <span>ROLE</span>
+        <span>AI Creative</span>
+      </div>
+
+      <div class="about-row">
+        <span>FIELD</span>
+        <span>Visual Design</span>
+      </div>
+
+      <div class="about-row">
+        <span>LOCATION</span>
+        <span>Indonesia</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <div class="section-number">
+      02 — SKILLS
+    </div>
+
+    <h2 class="section-title">
+      WHAT I<br>
+      DO.
+    </h2>
+
+    <div class="skills">
+
+      <div class="skill">AI IMAGE CREATION</div>
+
+      <div class="skill">AI VIDEO</div>
+
+      <div class="skill">GRAPHIC DESIGN</div>
+
+      <div class="skill">CHARACTER DESIGN</div>
+
+      <div class="skill">STORYBOARD</div>
+
+      <div class="skill">VISUAL STORYTELLING</div>
+
+      <div class="skill">PHOTO EDITING</div>
+
+      <div class="skill">VIDEO EDITING</div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCE -->
+
+  <section>
+
+    <div class="section-number">
+      03 — EXPERIENCE
+    </div>
+
+    <h2 class="section-title">
+      EXPERIENCE
+    </h2>
+
+    <div class="experience">
+
+      <div class="experience-item">
+
+        <div class="year">
+          2026 — PRESENT
+        </div>
+
+        <h3>
+          AI Creative
+        </h3>
+
+        <p>
+          Creating AI-assisted visual concepts,
+          digital artwork and creative content.
+        </p>
+
+      </div>
+
+      <div class="experience-item">
+
+        <div class="year">
+          2025 — PRESENT
+        </div>
+
+        <h3>
+          Visual Designer
+        </h3>
+
+        <p>
+          Developing visual concepts, posters,
+          campaign materials and digital artwork.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section>
+
+    <div class="section-number">
+      04 — SERVICES
+    </div>
+
+    <h2 class="section-title">
+      CREATIVE<br>
+      SERVICES.
+    </h2>
+
+    <div class="services">
+
+      <div class="service">
+        <h3>01. AI VISUAL CREATION</h3>
+        <p>
+          Creating unique visual concepts using
+          AI-assisted creative workflows.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>02. GRAPHIC DESIGN</h3>
+        <p>
+          Posters, promotional artwork,
+          social media and campaign visuals.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>03. CHARACTER DESIGN</h3>
+        <p>
+          Character concepts, character sheets
+          and visual development.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>04. STORYBOARD</h3>
+        <p>
+          Visual planning for video,
+          film and digital storytelling.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PORTFOLIO -->
+
+  <section id="portfolio">
+
+    <div class="section-number">
+      05 — SELECTED WORK
+    </div>
+
+    <h2 class="section-title">
+      PORTFOLIO.
+    </h2>
+
+    <p class="description">
+      A selection of creative projects and
+      visual experiments by Yus Shadie.
+    </p>
+
+    <div class="portfolio">
+
+      <div class="project">
+
+        <div class="project-number">
+          PROJECT 01
+        </div>
+
+        <h3>
+          AI VISUAL
+        </h3>
+
+        <p>
+          AI Image / Creative Artwork
+        </p>
+
+      </div>
+
+
+      <div class="project">
+
+        <div class="project-number">
+          PROJECT 02
+        </div>
+
+        <h3>
+          EVENT POSTER
+        </h3>
+
+        <p>
+          Graphic Design / Campaign
+        </p>
+
+      </div>
+
+
+      <div class="project">
+
+        <div class="project-number">
+          PROJECT 03
+        </div>
+
+        <h3>
+          CHARACTER
+        </h3>
+
+        <p>
+          Character Design / AI
+        </p>
+
+      </div>
+
+
+      <div class="project">
+
+        <div class="project-number">
+          PROJECT 04
+        </div>
+
+        <h3>
+          STORYBOARD
+        </h3>
+
+        <p>
+          Visual Storytelling
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="contact">
+
+    <div class="section-number">
+      06 — CONTACT
+    </div>
+
+    <h2>
+      LET'S CREATE<br>
+      SOMETHING<br>
+      AMAZING.
+    </h2>
+
+    <p>
+      Have a creative project in mind?
+      Let's turn your idea into a visual experience.
+    </p>
+
+    <div class="contact-links">
+
+      <a class="contact-link" href="#">
+        WHATSAPP
+      </a>
+
+      <a class="contact-link" href="#">
+        INSTAGRAM
+      </a>
+
+      <a class="contact-link" href="#">
+        EMAIL
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <span>
+      YUS SHADIE
+    </span>
+
+    <span>
+      © 2026
+    </span>
+
+  </footer>
+
+</body>
+  </html>
