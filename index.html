@@ -1,733 +1,1790 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Yus Shadie | Creative Portfolio</title>
+<meta charset="UTF-8">
 
-  <meta name="description"
-    content="Yus Shadie - AI Creative, Visual Designer and Digital Creator">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+<title>Yus Shadie | AI Creator</title>
+
+<meta name="description"
+content="Yus Shadie — Konten Kreator Video AI, Prompter dan Mentor Spectrum Academy dari Purwakarta, Jawa Barat, Indonesia.">
+
+
+<style>
+
+/* =====================================================
+   YUS SHADIE
+   PREMIUM AI CREATOR PORTFOLIO
+   DARKNESS • GOLD • ELECTRIC BLUE
+   ===================================================== */
+
+
+/* ================= ROOT ================= */
+
+:root {
+
+    --black: #020304;
+    --black2: #07090c;
+    --card: #0b0e12;
+
+    --gold: #d6ad52;
+    --gold-light: #f3d98b;
+
+    --blue: #63ddff;
+    --blue-light: #c4f7ff;
+    --blue-dark: #087d9f;
+
+    --white: #f5f7f8;
+    --gray: #929aa3;
+
+    --line: rgba(214,173,82,.24);
+
+}
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background:
+
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(0,180,230,.10),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(214,173,82,.07),
+            transparent 25%
+        ),
+
+        #020304;
+
+    color: var(--white);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================= DARKNESS ================= */
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    background:
+
+        radial-gradient(
+            ellipse at center,
+            transparent 10%,
+            rgba(0,0,0,.60) 100%
+        );
+
+}
+
+
+/* ================= BATIK GOLD ================= */
+
+.batik {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -4;
+
+    pointer-events: none;
+
+    opacity: .16;
+
+    background-image:
+
+        radial-gradient(
+            ellipse at center,
+            transparent 0 38%,
+            rgba(214,173,82,.30) 39% 40%,
+            transparent 41%
+        ),
+
+        repeating-linear-gradient(
+            45deg,
+            transparent 0 24px,
+            rgba(214,173,82,.10) 25px 26px,
+            transparent 27px 52px
+        );
+
+    background-size:
+        82px 82px,
+        105px 105px;
+
+}
+
+
+/* ================= BLUE SURREAL FLAME ================= */
+
+.flame {
+
+    position: fixed;
+
+    z-index: -3;
+
+    width: 430px;
+
+    height: 650px;
+
+    pointer-events: none;
+
+    opacity: .22;
+
+    filter: blur(9px);
+
+    background:
+
+        radial-gradient(
+            ellipse at 50% 80%,
+            rgba(99,221,255,.95),
+            rgba(8,125,159,.45) 24%,
+            transparent 62%
+        );
+
+    animation:
+        flameMove 9s ease-in-out infinite;
+
+}
+
+.flame-one {
+
+    right: -200px;
+
+    top: 8%;
+
+    transform: rotate(-18deg);
+
+}
+
+.flame-two {
+
+    left: -230px;
+
+    bottom: 5%;
+
+    transform: rotate(22deg);
+
+    animation-delay: -4s;
+
+}
+
+
+@keyframes flameMove {
+
+    0%,
+    100% {
+
+        margin-top: 0;
+
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0a0a0a;
-      color: #ffffff;
-      line-height: 1.6;
+    50% {
+
+        margin-top: -35px;
+
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 74px;
+
+    padding: 0 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        rgba(2,3,4,.86);
+
+    border-bottom:
+        1px solid var(--line);
+
+    backdrop-filter:
+        blur(18px);
+
+    z-index: 1000;
+
+}
+
+
+.logo {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+}
+
+
+.logo span {
+
+    color: var(--gold);
+
+}
+
+
+.menu {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+
+.menu a {
+
+    color: #c6cbd0;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    transition: .3s;
+
+}
+
+
+.menu a:hover {
+
+    color: var(--blue);
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    padding:
+        150px 7% 90px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 750px;
+
+}
+
+
+.eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.eyebrow::before {
+
+    content: "";
+
+    width: 48px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+}
+
+
+.hero h1 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(75px, 14vw, 175px);
+
+    line-height: .78;
+
+    letter-spacing: -7px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--gold);
+
+    text-shadow:
+        0 0 30px rgba(214,173,82,.15);
+
+}
+
+
+.hero-role {
+
+    color: var(--blue-light);
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.hero-subtitle {
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.hero-location {
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+}
+
+
+.btn {
+
+    padding:
+        13px 22px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    border:
+        1px solid var(--line);
+
+    transition: .3s;
+
+}
+
+
+.btn-gold {
+
+    background: var(--gold);
+
+    color: #030303;
+
+    border-color: var(--gold);
+
+}
+
+
+.btn-gold:hover {
+
+    background: var(--gold-light);
+
+    box-shadow:
+        0 0 35px rgba(214,173,82,.25);
+
+}
+
+
+.btn-outline {
+
+    color: var(--white);
+
+}
+
+
+.btn-outline:hover {
+
+    color: var(--blue);
+
+    border-color: var(--blue);
+
+}
+
+
+/* ================= SURREAL SYMBOL ================= */
+
+.surreal {
+
+    position: absolute;
+
+    right: 5%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 470px;
+
+    height: 470px;
+
+    border:
+        1px solid rgba(214,173,82,.30);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 80px rgba(99,221,255,.04),
+        inset 0 0 80px rgba(99,221,255,.04);
+
+}
+
+
+.surreal::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 38px;
+
+    border:
+        1px solid rgba(99,221,255,.28);
+
+    border-radius: 50%;
+
+}
+
+
+.surreal::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    color: var(--blue);
+
+    font-size: 150px;
+
+    opacity: .28;
+
+    text-shadow:
+        0 0 40px var(--blue);
+
+}
+
+
+/* ================= SECTION ================= */
+
+section {
+
+    position: relative;
+
+    padding:
+        120px 7%;
+
+}
+
+
+.section-label {
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.section-title {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(50px,8vw,90px);
+
+    line-height: .88;
+
+    margin-bottom: 55px;
+
+}
+
+
+.section-title span {
+
+    color: var(--gold);
+
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.profile-frame {
+
+    position: relative;
+
+    padding: 16px;
+
+    border:
+        1px solid var(--line);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(214,173,82,.12),
+            transparent
+        );
+
+}
+
+
+.profile-frame::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -10px;
+
+    top: -10px;
+
+    width: 75px;
+
+    height: 75px;
+
+    border-top:
+        2px solid var(--gold);
+
+    border-left:
+        2px solid var(--gold);
+
+}
+
+
+.profile-frame::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: -10px;
+
+    bottom: -10px;
+
+    width: 75px;
+
+    height: 75px;
+
+    border-right:
+        2px solid var(--blue);
+
+    border-bottom:
+        2px solid var(--blue);
+
+}
+
+
+.profile-photo {
+
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+}
+
+
+.about-text h3 {
+
+    color: var(--gold);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.about-text p {
+
+    color: #b7bdc4;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.highlight {
+
+    color: var(--blue-light);
+
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills {
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(8,125,159,.045),
+            transparent
+        );
+
+}
+
+
+.skills-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 16px;
+
+}
+
+
+.skill-card {
+
+    min-height: 240px;
+
+    padding: 28px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #101419,
+            #07090b
+        );
+
+    border:
+        1px solid rgba(214,173,82,.20);
+
+    transition: .4s;
+
+}
+
+
+.skill-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(99,221,255,.60);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.65),
+        0 0 35px rgba(99,221,255,.08);
+
+}
+
+
+.skill-number {
+
+    color: var(--blue);
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.skill-card h3 {
+
+    color: var(--gold);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.skill-card p {
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+}
+
+
+/* ================= WORK ================= */
+
+.work-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 18px;
+
+}
+
+
+.work-card {
+
+    min-height: 270px;
+
+    padding: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        #080a0d;
+
+    border:
+        1px solid rgba(214,173,82,.20);
+
+    transition: .4s;
+
+}
+
+
+.work-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        var(--gold);
+
+}
+
+
+.work-number {
+
+    color: var(--blue);
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 45px;
+
+}
+
+
+.work-card h3 {
+
+    color: var(--white);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 30px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.work-card h3 span {
+
+    color: var(--gold);
+
+}
+
+
+.work-card p {
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+    max-width: 500px;
+
+}
+
+
+.work-card::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 5px;
+
+    font-size: 55px;
+
+    color: var(--blue);
+
+    opacity: .07;
+
+}
+
+
+/* ================= VIDEO ================= */
+
+.video-section {
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(8,125,159,.08),
+            transparent 60%
+        );
+
+}
+
+
+.video-intro {
+
+    max-width: 680px;
+
+    margin-bottom: 50px;
+
+}
+
+
+.video-intro p {
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+
+.video-category {
+
+    margin-top: 60px;
+
+}
+
+
+.video-category-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.video-category-title span {
+
+    color: var(--gold);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 28px;
+
+}
+
+
+.video-category-title small {
+
+    color: var(--blue);
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.video-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 15px;
+
+}
+
+
+.video-item {
+
+    min-height: 215px;
+
+    padding: 24px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #101419,
+            #07090b
+        );
+
+    border:
+        1px solid rgba(214,173,82,.22);
+
+    transition: .4s;
+
+}
+
+
+.video-item:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(99,221,255,.60);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.65),
+        0 0 30px rgba(99,221,255,.07);
+
+}
+
+
+.video-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 150px;
+
+    right: -75px;
+
+    top: -75px;
+
+    border:
+        1px solid rgba(99,221,255,.25);
+
+    border-radius: 50%;
+
+}
+
+
+.video-item::after {
+
+    content: "▶";
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 18px;
+
+    width: 43px;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid rgba(99,221,255,.40);
+
+    border-radius: 50%;
+
+    color: var(--blue);
+
+    font-size: 12px;
+
+    background:
+        rgba(0,0,0,.45);
+
+}
+
+
+.video-number {
+
+    color: var(--blue);
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.video-item h3 {
+
+    color: var(--white);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 23px;
+
+    line-height: 1.15;
+
+    margin-top: auto;
+
+    margin-bottom: 7px;
+
+}
+
+
+.video-item p {
+
+    color: var(--gray);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 17px;
+
+}
+
+
+.watch-video {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    padding: 11px;
+
+    display: flex;
+
+    justify-content: center;
+
+    border:
+        1px solid rgba(214,173,82,.42);
+
+    color: var(--gold);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    transition: .3s;
+
+}
+
+
+.watch-video:hover {
+
+    background:
+        var(--gold);
+
+    color:
+        #050505;
+
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(100,20,35,.08)
+        );
+
+}
+
+
+.contact-text {
+
+    max-width: 650px;
+
+    margin:
+        0 auto 40px;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+}
+
+
+.contact-grid {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 14px;
+
+}
+
+
+.contact-link {
+
+    padding: 19px;
+
+    border:
+        1px solid var(--line);
+
+    background:
+        #080a0d;
+
+    color: var(--white);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    transition: .3s;
+
+}
+
+
+.contact-link:hover {
+
+    color:
+        var(--blue);
+
+    border-color:
+        var(--blue);
+
+    box-shadow:
+        0 0 30px rgba(99,221,255,.08);
+
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    padding:
+        35px 6%;
+
+    text-align:
+        center;
+
+    border-top:
+        1px solid var(--line);
+
+    color:
+        #656d75;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+footer strong {
+
+    color:
+        var(--gold);
+
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .surreal {
+
+        width: 350px;
+
+        height: 350px;
+
+        right: -120px;
+
+        opacity: .45;
+
     }
 
-    /* NAVIGATION */
+    .about-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .skills-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
 
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 18px 22px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(10,10,10,0.85);
-      backdrop-filter: blur(12px);
-      z-index: 1000;
-      border-bottom: 1px solid #222;
+
+        height: 65px;
+
+        padding: 0 5%;
+
     }
+
 
     .logo {
-      font-size: 18px;
-      font-weight: bold;
-      letter-spacing: 3px;
+
+        font-size: 15px;
+
+        letter-spacing: 3px;
+
     }
+
 
     .menu {
-      display: flex;
-      gap: 18px;
-      font-size: 12px;
-      letter-spacing: 1px;
+
+        gap: 8px;
+
     }
+
 
     .menu a {
-      color: #aaa;
+
+        font-size: 6px;
+
+        letter-spacing: 1px;
+
     }
 
-    .menu a:hover {
-      color: white;
-    }
-
-    /* HERO */
 
     .hero {
-      min-height: 100vh;
-      padding: 150px 25px 80px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background:
-        radial-gradient(circle at 80% 20%, #252525 0%, transparent 35%),
-        #0a0a0a;
+
+        padding:
+            130px 7% 80px;
+
+        min-height:
+            100vh;
+
     }
 
-    .small-title {
-      font-size: 13px;
-      letter-spacing: 4px;
-      color: #aaa;
-      margin-bottom: 20px;
-    }
 
     .hero h1 {
-      font-size: clamp(60px, 18vw, 110px);
-      line-height: 0.85;
-      letter-spacing: -4px;
-      margin-bottom: 30px;
+
+        font-size: 75px;
+
+        letter-spacing: -5px;
+
     }
 
-    .hero h2 {
-      font-size: 18px;
-      line-height: 1.5;
-      letter-spacing: 3px;
-      color: #ccc;
-      font-weight: normal;
+
+    .hero-role {
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 15px 25px;
-      border: 1px solid #ffffff;
-      width: fit-content;
-      font-size: 12px;
-      letter-spacing: 2px;
-      transition: 0.3s;
+
+    .hero-subtitle {
+
+        font-size: 9px;
+
     }
 
-    .button:hover {
-      background: white;
-      color: black;
+
+    .hero-location {
+
+        font-size: 8px;
+
     }
 
-    /* GENERAL SECTION */
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 180px;
+
+    }
+
+
+    .surreal {
+
+        width: 260px;
+
+        height: 260px;
+
+        right: -130px;
+
+        top: 70%;
+
+        opacity: .25;
+
+    }
+
+
+    .surreal::after {
+
+        font-size: 90px;
+
+    }
+
 
     section {
-      padding: 100px 25px;
+
+        padding:
+            85px 6%;
+
     }
 
-    .section-number {
-      color: #666;
-      font-size: 12px;
-      letter-spacing: 3px;
-      margin-bottom: 15px;
-    }
 
     .section-title {
-      font-size: 42px;
-      line-height: 1;
-      margin-bottom: 35px;
+
+        font-size: 55px;
+
+        margin-bottom: 40px;
+
     }
 
-    .description {
-      color: #aaa;
-      font-size: 16px;
-      max-width: 650px;
+
+    .skills-grid {
+
+        grid-template-columns:
+            1fr;
+
     }
 
-    /* ABOUT */
 
-    .about-box {
-      margin-top: 40px;
-      border-top: 1px solid #333;
-      border-bottom: 1px solid #333;
-      padding: 25px 0;
+    .work-grid {
+
+        grid-template-columns:
+            1fr;
+
     }
 
-    .about-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 14px 0;
-      border-bottom: 1px solid #222;
+
+    .video-grid {
+
+        grid-template-columns:
+            1fr;
+
     }
 
-    .about-row:last-child {
-      border-bottom: none;
+
+    .video-item {
+
+        min-height: 190px;
+
     }
 
-    .about-row span:first-child {
-      color: #777;
+
+    .contact-grid {
+
+        grid-template-columns:
+            1fr;
+
     }
 
-    /* SKILLS */
 
-    .skills {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 35px;
+    .video-category-title span {
+
+        font-size: 23px;
+
     }
 
-    .skill {
-      padding: 22px 15px;
-      border: 1px solid #292929;
-      background: #111;
-      font-size: 13px;
-      letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   SMALL PHONE
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .menu {
+
+        gap: 5px;
+
     }
 
-    /* EXPERIENCE */
 
-    .experience {
-      margin-top: 30px;
+    .menu a {
+
+        font-size: 5px;
+
     }
 
-    .experience-item {
-      padding: 30px 0;
-      border-top: 1px solid #333;
+
+    .hero h1 {
+
+        font-size: 65px;
+
     }
 
-    .experience-item h3 {
-      font-size: 21px;
-      margin-bottom: 5px;
-    }
+}
 
-    .experience-item .year {
-      color: #777;
-      font-size: 13px;
-      margin-bottom: 15px;
-    }
+</style>
 
-    .experience-item p {
-      color: #999;
-    }
-
-    /* SERVICES */
-
-    .services {
-      margin-top: 30px;
-    }
-
-    .service {
-      padding: 28px 0;
-      border-top: 1px solid #333;
-    }
-
-    .service h3 {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    .service p {
-      color: #888;
-    }
-
-    /* PORTFOLIO */
-
-    .portfolio {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-      margin-top: 35px;
-    }
-
-    .project {
-      min-height: 260px;
-      background: linear-gradient(135deg,#222,#111);
-      border: 1px solid #292929;
-      padding: 25px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      transition: 0.4s;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-      border-color: #777;
-    }
-
-    .project-number {
-      color: #777;
-      font-size: 12px;
-      margin-bottom: 8px;
-    }
-
-    .project h3 {
-      font-size: 24px;
-    }
-
-    .project p {
-      color: #888;
-      font-size: 13px;
-    }
-
-    /* CONTACT */
-
-    .contact {
-      min-height: 70vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: #111;
-    }
-
-    .contact h2 {
-      font-size: clamp(42px, 12vw, 80px);
-      line-height: 0.95;
-      margin-bottom: 25px;
-    }
-
-    .contact p {
-      color: #888;
-      max-width: 500px;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 30px;
-    }
-
-    .contact-link {
-      border: 1px solid #444;
-      padding: 13px 18px;
-      font-size: 12px;
-      letter-spacing: 1px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      padding: 30px 25px;
-      border-top: 1px solid #222;
-      color: #666;
-      font-size: 12px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    /* DESKTOP */
-
-    @media (min-width: 700px) {
-
-      .hero {
-        padding-left: 10%;
-        padding-right: 10%;
-      }
-
-      section {
-        padding-left: 10%;
-        padding-right: 10%;
-      }
-
-      .portfolio {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .skills {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .menu {
-        gap: 30px;
-      }
-    
-  </style>
 </head>
+
 
 <body>
 
-  <!-- NAVIGATION -->
 
-  <nav>
-    <div class="logo">YUS SHADIE</div>
+<!-- =====================================================
+     BACKGROUND
+     ===================================================== -->
 
-    <div class="menu">
-      <a href="#about">ABOUT</a>
-      <a href="#skills">SKILLS</a>
-      <a href="#portfolio">WORK</a>
-      <a href="#contact">CONTACT</a>
-    </div>
-  </nav>
+<div class="batik"></div>
+
+<div class="flame flame-one"></div>
+
+<div class="flame flame-two"></div>
 
 
-  <!-- HERO -->
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
 
-  <section class="hero">
+<nav>
 
-    <div class="small-title">
-      HELLO, I'M
-    </div>
-
-    <h1>
-      YUS<br>
-      SHADIE
-    </h1>
-
-    <img src="profile.png" alt="Yus Shadie" class="profile-photo">
- 
-    <h2>
-      AI CREATIVE<br>
-      VISUAL DESIGNER<br>
-      DIGITAL CREATOR
-    </h2>
-
-    <a href="#portfolio" class="button">
-      VIEW MY WORK →
+    <a href="#home" class="logo">
+        YUS <span>SHADIE</span>
     </a>
 
-  </section>
+    <div class="menu">
 
+        <a href="#about">
+            ABOUT
+        </a>
 
-  <!-- ABOUT -->
+        <a href="#skills">
+            SKILLS
+        </a>
 
-  <section id="about">
+        <a href="#work">
+            WORK
+        </a>
 
-    <div class="section-number">
-      01 — ABOUT
+        <a href="#video">
+            VIDEO
+        </a>
+
+        <a href="#contact">
+            CONTACT
+        </a>
+
     </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            AI CREATIVE PORTFOLIO
+        </div>
+
+
+        <h1>
+
+            YUS<br>
+
+            <span>SHADIE</span>
+
+        </h1>
+
+
+        <div class="hero-role">
+
+            AI VIDEO CONTENT CREATOR
+
+        </div>
+
+
+        <div class="hero-subtitle">
+
+            PROMPTER • MENTOR SPECTRUM ACADEMY
+
+        </div>
+
+
+        <div class="hero-location">
+
+            PURWAKARTA — JAWA BARAT — INDONESIA
+
+        </div>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#work"
+                class="btn btn-gold">
+
+                EXPLORE WORK
+
+            </a>
+
+
+            <a
+                href="#video"
+                class="btn btn-outline">
+
+                WATCH VIDEO
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="surreal"></div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+     ===================================================== -->
+
+<section id="about">
+
+    <div class="section-label">
+
+        01 — CREATIVE IDENTITY
+
+    </div>
+
 
     <h2 class="section-title">
-      CREATIVE MIND.<br>
-      VISUAL STORYTELLER.
+
+        ABOUT<br>
+
+        <span>YUS</span>
+
     </h2>
 
-    <p class="description">
-      Yus Shadie is a creative professional focused on
-      visual design, artificial intelligence, digital
-      creativity and visual storytelling.
-    </p>
 
-    <div class="about-box">
-
-      <div class="about-row">
-        <span>NAME</span>
-        <span>Yus Shadie</span>
-      </div>
-
-      <div class="about-row">
-        <span>ROLE</span>
-        <span>AI Creative</span>
-      </div>
-
-      <div class="about-row">
-        <span>FIELD</span>
-        <span>Visual Design</span>
-      </div>
-
-      <div class="about-row">
-        <span>LOCATION</span>
-        <span>Indonesia</span>
-      </div>
-
-    </div>
-
-  </section>
+    <div class="about-grid">
 
 
-  <!-- SKILLS -->
+        <div class="profile-frame">
 
-  <section id="skills">
+            <img
+                src="profile.png"
+                alt="Yus Shadie"
+                class="profile-photo">
 
-    <div class="section-number">
-      02 — SKILLS
-    </div>
-
-    <h2 class="section-title">
-      WHAT I<br>
-      DO.
-    </h2>
-
-    <div class="skills">
-
-      <div class="skill">AI IMAGE CREATION</div>
-
-      <div class="skill">AI VIDEO</div>
-
-      <div class="skill">GRAPHIC DESIGN</div>
-
-      <div class="skill">CHARACTER DESIGN</div>
-
-      <div class="skill">STORYBOARD</div>
-
-      <div class="skill">VISUAL STORYTELLING</div>
-
-      <div class="skill">PHOTO EDITING</div>
-
-      <div class="skill">VIDEO EDITING</div>
-
-    </div>
-
-  </section>
-
-
-  <!-- EXPERIENCE -->
-
-  <section>
-
-    <div class="section-number">
-      03 — EXPERIENCE
-    </div>
-
-    <h2 class="section-title">
-      EXPERIENCE
-    </h2>
-
-    <div class="experience">
-
-      <div class="experience-item">
-
-        <div class="year">
-          2026 — PRESENT
         </div>
 
-        <h3>
-          AI Creative
-        </h3>
 
-        <p>
-          Creating AI-assisted visual concepts,
-          digital artwork and creative content.
-        </p>
+        <div class="about-text">
 
-      </div>
+            <h3>
 
-      <div class="experience-item">
+                Yus Shadie
 
-        <div class="year">
-          2025 — PRESENT
-        </div>
+            </h3>
 
-        <h3>
-          Visual Designer
-        </h3>
 
-        <p>
-          Developing visual concepts, posters,
-          campaign materials and digital artwork.
-        </p>
+            <p>
 
-      </div>
+                Yus Shadie
+                <span class="highlight">
+                    Konten Kreator Video AI
+                </span>
+                yang mengeksplorasi perpaduan
+                teknologi Artificial Intelligence,
+                visual storytelling dan cinematic art.
 
-    </div>
-
-  </section>
-
-
-  <!-- SERVICES -->
-
-  <section>
-
-    <div class="section-number">
-      04 — SERVICES
-    </div>
-
-    <h2 class="section-title">
-      CREATIVE<br>
-      SERVICES.
-    </h2>
-
-    <div class="services">
-
-      <div class="service">
-        <h3>01. AI VISUAL CREATION</h3>
-        <p>
-          Creating unique visual concepts using
-          AI-assisted creative workflows.
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>02. GRAPHIC DESIGN</h3>
-        <p>
-          Posters, promotional artwork,
-          social media and campaign visuals.
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>03. CHARACTER DESIGN</h3>
-        <p>
-          Character concepts, character sheets
-          and visual development.
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>04. STORYBOARD</h3>
-        <p>
-          Visual planning for video,
-          film and digital storytelling.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PORTFOLIO -->
-
-  <section id="portfolio">
-
-    <div class="section-number">
-      05 — SELECTED WORK
-    </div>
-
-    <h2 class="section-title">
-      PORTFOLIO.
-    </h2>
-
-    <p class="description">
-      A selection of creative projects and
-      visual experiments by Yus Shadie.
-    </p>
-
-    <div class="portfolio">
-
-      <div class="project">
-
-        <div class="project-number">
-          PROJECT 01
-        </div>
-
-        <h3>
-          AI VISUAL
-        </h3>
-
-        <p>
-          AI Image / Creative Artwork
-        </p>
-
-      </div>
-
-
-      <div class="project">
-
-        <div class="project-number">
-          PROJECT 02
-        </div>
-
-        <h3>
-          EVENT POSTER
-        </h3>
-
-        <p>
-          Graphic Design / Campaign
-        </p>
-
-      </div>
-
-
-      <div class="project">
-
-        <div class="project-number">
-          PROJECT 03
-        </div>
-
-        <h3>
-          CHARACTER
-        </h3>
-
-        <p>
-          Character Design / AI
-        </p>
-
-      </div>
-
-
-      <div class="project">
-
-        <div class="project-number">
-          PROJECT 04
-        </div>
-
-        <h3>
-          STORYBOARD
-        </h3>
-
-        <p>
-          Visual Storytelling
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-
-  <section id="contact" class="contact">
-
-    <div class="section-number">
-      06 — CONTACT
-    </div>
-
-    <h2>
-      LET'S CREATE<br>
-      SOMETHING<br>
-      AMAZING.
-    </h2>
-
-    <p>
-      Have a creative project in mind?
-      Let's turn your idea into a visual experience.
-    </p>
-
-    <div class="contact-links">
-
-  <a class="contact-link"
-     href="https://wa.me/6283116951732"
-     target="_blank"
-     rel="noopener">
-    WHATSAPP
-  </a>
-
-  <a class="contact-link"
-     href="https://www.facebook.com/share/18B6Y3PoY5/"
-     target="_blank"
-     rel="noopener">
-    FACEBOOK
-  </a>
-
-  <a class="contact-link"
-     href="https://www.instagram.com/yusshadie_dnc?igsi=MW50bXk4ajd3dXVnZw=="
-     target="_blank"
-     rel="noopener">
-    INSTAGRAM
-  </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <span>
-      YUS SHADIE
-    </span>
-
-    <span>
-      © 2026
-    </span>
-
-  </footer>
-
-</body>
-  </html>
+     
