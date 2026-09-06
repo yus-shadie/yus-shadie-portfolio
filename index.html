@@ -760,7 +760,31 @@ letter-spacing:-3px;
 
 }
 
+/* FACEBOOK REEL */
+.facebook-reel-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    background: #000;
+}
 
+.facebook-reel-box iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.facebook-reel-box .video-number {
+    position: absolute;
+    top: 22px;
+    left: 28px;
+    z-index: 5;
+    pointer-events: none;
+   }
+   
 /* =====================================================
    HTML CONTENT
 ===================================================== */
@@ -1223,64 +1247,43 @@ melalui player di website.
 <div class="videos">
 
 
-<!-- VIDEO 01 -->
-
+<!-- VIDEO 01 — FACEBOOK REEL -->
 <article class="video-card">
 
-<a
-href="https://www.facebook.com/share/r/1HQqw3486z/"
-target="_blank"
-rel="noopener noreferrer"
-style="display:block;text-decoration:none;color:white;">
+    <div class="video-box facebook-reel-box">
 
-<div class="video-box"
-style="cursor:pointer;">
+        <iframe
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1349494730239565&show_text=false&width=560"
+            style="border:none;overflow:hidden;width:100%;height:100%;"
+            scrolling="no"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowfullscreen="true">
+        </iframe>
 
-<video
-controls
-playsinline
-preload="metadata"
-poster="profile.png">
+        <div class="video-number">
+            REEL 01
+        </div>
 
-<source
-src="videos/reel-01.mp4"
-type="video/mp4">
+    </div>
 
-Browser Anda tidak mendukung
-pemutar video.
+    <div class="video-info">
 
-</video>
+        <h3>Creative AI Reel</h3>
 
-<div class="video-number">
-REEL 01
-</div>
+        <p>
+            Eksplorasi konsep kreatif AI.
+        </p>
 
-</div>
+        <a
+            class="facebook-link"
+            href="https://www.facebook.com/reel/1349494730239565"
+            target="_blank"
+            rel="noopener noreferrer">
+            TONTON DI FACEBOOK ↗
+        </a>
 
-</a>
-
-
-<div class="video-info">
-
-<h3>
-Creative AI Reel
-</h3>
-
-<p>
-Eksplorasi konsep kreatif AI.
-</p>
-
-<a
-class="facebook-link"
-href="https://www.facebook.com/share/r/1HQqw3486z/"
-target="_blank"
-rel="noopener noreferrer">
-
-TONTON DI FACEBOOK ↗
-
-</a>
-
-</div>
+    </div>
 
 </article>
 
