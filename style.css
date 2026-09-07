@@ -2261,3 +2261,498 @@ main{
   }
 
 }
+/* =========================================================
+   HEADER MOBILE — FINAL FIX
+   YUS SHADIE
+   ========================================================= */
+
+
+/* =========================================================
+   HEADER DESKTOP
+   ========================================================= */
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:9999;
+
+  width:100%;
+
+  background:rgba(4,5,7,.94);
+
+  border-bottom:1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+}
+
+
+/* Header inner */
+
+.header-inner{
+  width:100%;
+  max-width:1180px;
+
+  min-height:70px;
+
+  margin:0 auto;
+
+  padding:0 30px;
+
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:20px;
+}
+
+
+/* Logo */
+
+.logo{
+  flex:0 0 auto;
+
+  display:flex;
+  align-items:center;
+
+  gap:10px;
+
+  white-space:nowrap;
+}
+
+
+/* Menu */
+
+.menu{
+  flex:0 0 auto;
+
+  display:none;
+
+  margin:0;
+
+  padding:0;
+}
+
+
+/* =========================================================
+   MOBILE HEADER
+   ========================================================= */
+
+@media(max-width:800px){
+
+  .header{
+    position:sticky;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    max-width:100%;
+
+    height:auto;
+    min-height:72px;
+
+    padding:0;
+
+    z-index:9999;
+  }
+
+
+  /* -----------------------------------------
+     HEADER INNER
+     ----------------------------------------- */
+
+  .header-inner{
+
+    width:100%;
+    max-width:100%;
+
+    min-width:0;
+
+    height:72px;
+    min-height:72px;
+
+    margin:0;
+
+    padding:
+      0 16px;
+
+    display:flex;
+
+    flex-direction:row;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:12px;
+  }
+
+
+  /* -----------------------------------------
+     LOGO
+     ----------------------------------------- */
+
+  .logo{
+
+    flex:1 1 auto;
+
+    min-width:0;
+
+    width:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    font-family:"Cinzel",serif;
+
+    font-size:14px;
+
+    line-height:1;
+
+    letter-spacing:.14em;
+  }
+
+
+  .logo-mark{
+
+    flex:0 0 auto;
+
+    width:32px;
+    height:32px;
+  }
+
+
+  /* -----------------------------------------
+     HAMBURGER BUTTON
+     ----------------------------------------- */
+
+  .menu{
+
+    position:relative;
+
+    flex:0 0 46px;
+
+    display:block;
+
+    width:46px;
+    min-width:46px;
+
+    height:46px;
+    min-height:46px;
+
+    margin:0;
+
+    padding:0;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:16px;
+
+    background:
+      rgba(255,255,255,.025);
+
+    cursor:pointer;
+
+    z-index:10001;
+  }
+
+
+  /* -----------------------------------------
+     HAMBURGER LINES
+     ----------------------------------------- */
+
+  .menu span,
+  .menu::before,
+  .menu::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    width:20px;
+    height:1.5px;
+
+    background:#f7f7f4;
+
+    transform:
+      translateX(-50%);
+
+    transition:
+      top .25s ease,
+      transform .25s ease,
+      opacity .25s ease;
+  }
+
+
+  .menu::before{
+    top:16px;
+  }
+
+  .menu span{
+    top:22px;
+  }
+
+  .menu::after{
+    top:28px;
+  }
+
+
+  /* -----------------------------------------
+     MENU ACTIVE → X
+     ----------------------------------------- */
+
+  .menu.active::before{
+
+    top:22px;
+
+    transform:
+      translateX(-50%)
+      rotate(45deg);
+  }
+
+
+  .menu.active span{
+
+    opacity:0;
+  }
+
+
+  .menu.active::after{
+
+    top:22px;
+
+    transform:
+      translateX(-50%)
+      rotate(-45deg);
+  }
+
+
+  /* -----------------------------------------
+     MOBILE NAVIGATION
+     ----------------------------------------- */
+
+  .nav{
+
+    position:absolute;
+
+    top:72px;
+
+    left:0;
+    right:0;
+
+    width:100%;
+    max-width:100%;
+
+    height:auto;
+
+    margin:0;
+
+    padding:
+      8px 16px 18px;
+
+    display:none;
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+    gap:0;
+
+    background:
+      rgba(4,5,7,.98);
+
+    border-bottom:
+      1px solid rgba(255,255,255,.1);
+
+    box-shadow:
+      0 20px 45px rgba(0,0,0,.45);
+
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+
+    z-index:10000;
+  }
+
+
+  /* Saat menu dibuka */
+
+  .nav.open{
+    display:flex;
+  }
+
+
+  /* Link menu */
+
+  .nav a{
+
+    width:100%;
+
+    min-height:48px;
+
+    padding:
+      14px 8px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    border-bottom:
+      1px solid rgba(255,255,255,.07);
+
+    color:#a8a9b1;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+  }
+
+
+  .nav a:last-child{
+    border-bottom:0;
+  }
+
+
+  .nav a:hover{
+
+    color:#f3d582;
+
+    transform:none;
+  }
+
+
+  .nav a::after{
+    display:none;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   ========================================================= */
+
+@media(max-width:380px){
+
+  .header-inner{
+
+    height:66px;
+    min-height:66px;
+
+    padding:
+      0 12px;
+  }
+
+
+  .header{
+
+    min-height:66px;
+  }
+
+
+  .logo{
+
+    font-size:12px;
+
+    letter-spacing:.12em;
+  }
+
+
+  .logo-mark{
+
+    width:30px;
+    height:30px;
+  }
+
+
+  .menu{
+
+    flex-basis:43px;
+
+    width:43px;
+    min-width:43px;
+
+    height:43px;
+    min-height:43px;
+
+    border-radius:14px;
+  }
+
+
+  .nav{
+
+    top:66px;
+
+    padding-left:12px;
+    padding-right:12px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE
+   ========================================================= */
+
+@media(max-width:320px){
+
+  .header-inner{
+
+    padding:
+      0 10px;
+  }
+
+
+  .logo{
+
+    font-size:11px;
+  }
+
+
+  .menu{
+
+    flex-basis:40px;
+
+    width:40px;
+    min-width:40px;
+
+    height:40px;
+    min-height:40px;
+  }
+
+
+  .menu::before{
+    top:14px;
+  }
+
+  .menu span{
+    top:20px;
+  }
+
+  .menu::after{
+    top:26px;
+  }
+
+
+  .menu.active::before,
+  .menu.active::after{
+    top:20px;
+  }
+
+}
